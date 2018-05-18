@@ -4,6 +4,14 @@ import matplotlib.pyplot as plt
 #reading the data file
 data=pd.read_csv('data.csv')
 
+
+
+#=========================================================================================================================================================
+	#Question1 : Plot a graph to gain insights into the underfive Mortality rates of all the countries in the year 1990 sorted in an ascending order
+	#if the Graph is too dense then display first 10 and last 10 countries
+
+#=========================================================================================================================================================
+
 #filtering the data for 1990
 y90 = data[data['Year']==1990]
 
@@ -29,6 +37,12 @@ plt.locator_params(nbins=20)
 #displaying the plot
 plt.show()
 
+#=========================================================================================================================================================
+	#Question2 : Plot a graph to gain insights into the underfive Mortality rates of all the countries in the year 2015 sorted in an ascending order
+	#if the Graph is too dense then display first 10 and last 10 countries
+
+#=========================================================================================================================================================
+
 #filtering the data for 2015
 y15 = data[data['Year']==2015]
 #sorting the 1990 data based on mortality rates
@@ -52,6 +66,12 @@ plt.locator_params(nbins=20)
 plt.show()
 
 
+#=========================================================================================================================================================
+	#Question3 : Plot a graph to gain insights into the underfive Mortality rates for any three countries of you choice from 1990 to 2015.
+	#Display the graph as line trends from 1990 to 2015 
+
+#=========================================================================================================================================================
+
 Count3=pd.concat([data[data['Country']=='China'],data[data['Country']=='Canada'],data[data['Country']=='Bahrain']])
 #cleans the under five mortality rate column and takes the integer value for plotting
 for i in range(Count3.shape[0]):
@@ -69,6 +89,12 @@ ax.set_ylabel('Mortality Rate')
 ax.legend(loc='best')
 plt.title('Question3:The mortality rate trends: ')
 plt.show()
+
+
+#=========================================================================================================================================================
+	#Question4 : Plot a bar graph to gain insights into the Reduction rates of any three countries 
+	#the reduction rate of a country is the mortality rate of 2015 divided by the reduction rate of 1990
+#=========================================================================================================================================================
 
 # fig,ax=plt.subplots()
 names=list()
