@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
+import warnings
+warnings.filterwarnings("ignore")
 
 #reading the data file
 data=pd.read_csv('data.csv')
